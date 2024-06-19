@@ -46,7 +46,11 @@ SECRET_KEY = "django-insecure-pq4c@f1zulqjd^%ao*tzfpeqt^kh5mtlq@9dgz&-(%b+*28mxo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "54.211.208.24",
+
+]
 
 
 # Application definition
@@ -165,9 +169,11 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "static"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Default primary key field type

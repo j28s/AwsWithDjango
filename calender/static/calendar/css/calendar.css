@@ -1,0 +1,408 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+/* #left-bar {
+	background-color: #f05e5ef2;
+	width: 15%;
+	min-height: 100vh;
+	float: left;
+} */
+
+#right-area {
+	width: 100%;
+	min-height: 100vh;
+	/* float: right; */
+}
+
+#menu-bar {
+	font-size : 19px;
+	color: rgba(199, 80, 198, 0.95);
+	padding-top: 5px;
+	height: 30px;
+	text-align: center;
+	/* border-bottom: 1px solid #e5e6e7; */
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.icons-right {
+	position: absolute;
+	right: 0;
+	font-size: 1.1em;
+}
+
+#clock {
+	text-align: center;
+	color: white;
+	font-weight: 300;
+}
+
+#hourmin {
+	font-size: 3.7em;
+}
+
+.container {
+	height: calc(100vh - 38px);
+	width: calc(100% - 20px);
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+table {
+	border: none;
+	border-bottom: 1px solid #e5e6e7;
+	min-height: 80%;
+	width: 100%;
+	/* color: #b3b3b3; */
+	color: rgb(36, 36, 36);
+	border-collapse: collapse;
+}
+
+tr, td {
+	margin: 0;
+	padding: 5px 0px 0px 5px;
+	border: 1px solid #e5e6e7;
+	vertical-align: top;
+}
+
+td {
+	height: 100px;
+	width: 200px;
+}
+
+.table-header {
+	border-top: none;
+	height: 40px;
+	vertical-align: bottom;
+	text-align: left;
+	font-size: 0.8em;
+	border-right: none;
+	border-left: none;
+}
+
+.currentday {
+	background-color: #bebebef2;
+	color: white;
+}
+
+#addEvent {
+    /* border: solid 1px rgba(157, 37, 156, 0.95); */
+    box-shadow : 0 7px 30px 3px gray;
+	border-radius: 3px;
+	width: 275px;
+	display: none;
+	z-index: 100;
+	background-color: white;
+}
+
+.eveBoxClose {
+	position: absolute;
+	top: 9px;
+	right: 11px;
+	cursor: pointer;
+	color: #b3b3b3;
+}
+
+.eveBoxDate {
+	color: rgba(157, 37, 156, 0.95);
+	display: inline-block;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 11px;
+	margin-left: 15px;
+}
+
+.form-container {
+	padding-left: 5%;
+	color: #c1c1c1;
+	font-size: 0.8em;
+}
+
+input, textarea {
+	border: 1px solid #c1c1c1;
+	color: #777777;
+	padding: 2px 0px 2px 5px;
+	border-radius: 3px;
+}
+
+#eventName {
+	font-size: 16px;
+	width: 91%;
+	/* height: 25px; */
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#eventLocation {
+	width: 91%;
+	/* height: 18px; */
+	font-size: 16px;
+	margin-top: -10px;
+}
+#eventStartDate, #eventEndDate {
+	margin-bottom: 10px;
+	width: 94.5%;
+}
+
+textarea {
+	font-size: 1.1em;
+	padding: 5px 5px 5px 5px;
+}
+
+#eventCancelButton, #eventSaveButton {
+	margin-top: 10px;
+	font-size: 1.1em;
+	width: 90px;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #e5e6e7;
+	color: #777777;
+    border: none;
+    cursor: pointer;
+}
+
+#eventSaveButton {
+	position: absolute;
+	background-color: rgba(157, 37, 156, 0.95);
+	color: White;
+	font-weight: bold;
+	right: 15px;
+}
+
+#error {
+	color: rgba(93, 15, 92, 0.95);
+	font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+   color: #c1c1c1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #c1c1c1;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #c1c1c1;  
+}
+
+:-ms-input-placeholder {  
+   color: #c1c1c1;  
+}
+
+#status {
+	width: 15%;
+	color: white;
+	text-align: center;
+	position: absolute;
+	bottom: 15px;
+	font-size: 1.4em;
+}
+
+.event-rectangles {
+	cursor: pointer;
+	background-color: rgba(199, 80, 198, 0.95);
+	color:white;
+	/* border: 1px solid rgba(157, 37, 156, 0.95); */
+	/* border-radius: 3px; */
+	margin-bottom: 3px;
+	height: 20px;
+	padding-left: 10px;
+	margin-left: -4px;
+	margin-right: 1px;
+	font-size: 0.8em;
+    transition: 0.3s;
+    box-shadow : 0px 2px 8px 0px rgb(161, 161, 161);
+}
+.event-rectangles:hover {
+	background-color: rgba(157, 37, 156, 0.95);
+}
+
+.joint-event {
+	/* border: 3px solid rgb(109, 29, 29); */
+	background-color: rgba(73, 25, 73, 0.95);
+	margin-left: -6px;
+	margin-right: -1px;
+	border-radius: 0;
+	z-index:5;
+	position: relative;
+}
+.joint-event:hover {
+	background-color: rgba(93, 15, 92, 0.95);
+}
+
+.currentday .event-rectangles {
+	background-color: f05e5ef2;
+	/* border: 3px solid #f05e5ef2; */
+	color: white;
+	margin-bottom: 3px;
+	margin-left: -5px;
+	height: 20px;
+	padding-left: 10px;
+	font-size: 0.8em;
+}
+
+.event-rectangle-select {
+	background-color: rgba(157, 37, 156, 0.95) !important;
+	color: white !important;
+	/* border-color: #ff8787 !important; */
+}
+
+
+#justForShowEvent {
+	/* border-radius: 3px; */
+	background-color: #e5e6e7;
+	margin-left: -5px;
+	/* width: 100%; */
+    height: 20px;
+}
+
+#viewEvent {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 22px;
+	/* border: solid 1px rgba(157, 37, 156, 0.95); */
+	border-radius: 3px;
+	width: 230px;
+	display: none;
+	z-index: 100;
+    background-color: white;
+    box-shadow : 0 7px 30px 3px gray;
+}
+
+.viewEveBoxName {
+	font-size: 1.3em;
+	color: rgba(157, 37, 156, 0.95);
+	font-weight: bold;
+}
+
+.viewEveLabel {
+	font-size: 0.9em;
+	color: gray;
+	font-weight: bold;
+}
+
+.viewLocation, .viewDay, .viewDescription, .viewTitle {
+	font-size: 15px;
+	/* font-weight: bold; */
+	color: black;
+}
+
+#eventDeleteButton, #eventEditButton {
+	width: 90px;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #e5e6e7;
+	color: #777777;
+	border: none;
+	cursor:pointer;
+	margin-bottom: 12px;
+}
+
+#eventEditButton {
+	position: absolute;
+	background-color: rgba(157, 37, 156, 0.95);
+	color: White;
+	font-weight: bold;
+	right: 15px;
+}
+
+#viewEveBoxEveId {
+	display: none;
+}
+
+#authorize-button {
+	background-color: rgba(199, 80, 198, 0.95);
+	color: white;
+	border: none;
+	padding: 5px 10px 5px 10px;
+	margin-right: 10px;
+}
+
+#status {
+	background-color: #2bc493;
+}
+
+@media only screen and (max-width: 750px) {
+	#left-bar {
+		display: none;
+	}
+	#right-area {
+		float: none;
+		margin-left: 20px;
+	}
+	.container {
+		padding: 0;
+		width: 80%;
+	}
+	table {
+		width: 90vw;
+	}
+	td {
+		width: 40vw !important;
+		height: 30px;
+	}
+	.weather {
+		display: none;
+	}
+	.event-rectangles {
+		padding-left: 5px;
+		font-size: 0.6em;
+	}
+	.date {
+		font-size: 0.8em;
+	}
+	#addEvent {
+		font-size: 0.6em;
+		width: 150px;
+	}
+	#viewEvent {
+		font-size: 0.7em;
+		width: 140px;
+	}
+	#eventName, #eventLocation {
+		font-size: 1.2em;
+		width: 120px;
+		height: 10px;
+	}
+	#eventStartDate, #eventStartTime, #eventEndDate, #eventEndTime {
+		height: 10px;
+		font-size: 1.2em;
+	}
+	#eventCancelButton, #eventSaveButton, #eventEditButton, #eventDeleteButton {
+		margin-top: 10px;
+		font-size: 0.9em;
+		width: 60px;
+		height: 15px;
+	}
+	#eventDescription {
+		height: 30px;
+	}
+	#authorize-button {
+		position: fixed;
+		left: 10px;
+	}
+}
+
+/*mdb input background color*/
+@-webkit-keyframes autofill {
+to {
+color: #666;
+background: transparent; } }
+
+@keyframes autofill {
+to {
+color: #666;
+background: transparent; } }
+
+input:-webkit-autofill {
+-webkit-animation-name: autofill;
+animation-name: autofill;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both; }

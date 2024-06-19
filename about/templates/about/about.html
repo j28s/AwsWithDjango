@@ -1,0 +1,73 @@
+{% extends "users/main_base.html" %}
+{% load static %}
+
+{% block mobileView %}
+<meta name="viewport" content="width=800, user-scalable=yes">
+{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}" type="text/css">
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10">
+            <h4 style="font-weight: bold;">전북대학교 댄스동아리 Pit A Pat</h4>
+        </div>
+
+    </div>
+</div>
+<hr style="width:69rem;">
+<br>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card h-70">
+      <img src="{% static 'about/image/pitapat22.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2022</h5>
+        <p class="card-text">대동제 공연</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-70">
+      <img src="{% static 'about/image/2023ot.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2023</h5>
+        <p class="card-text">농업생명과학대학 새내기배움터 초청 공연</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-70">
+      <img src="{% static 'about/image/2023.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2023</h5>
+        <p class="card-text">벚꽃제 초청 공연</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-70">
+      <img src="{% static 'about/image/23.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2023</h5>
+        <p class="card-text">대동제 댄스경연대회</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-70">
+      <img src="{% static 'about/image/2024.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">2024</h5>
+        <p class="card-text">대동제: 청춘 댄스제</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

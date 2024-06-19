@@ -1,0 +1,108 @@
+{% load socialaccount %}
+
+<nav id="sidebar">
+    <div id="side_hide">
+        <div style="position:fixed; left: 273px; z-index:3;">
+            <div id="sidebarCollapseHide" onclick="hide()"
+                 style="margin-top: 15px; margin-right:15px; margin-bottom: -30px; cursor: pointer;">
+                <i class="fa fa-chevron-left fa-lg"></i>
+            </div>
+        </div>
+    </div>
+    <div class="p-4 pt-5" style="position: fixed; width:300px;">
+        {% if user.is_authenticated %}
+
+        <span style="font-size: 22px;">{{ user.username }}</span> 님 환영합니다.
+        <a href="{% url 'users:logout' %}" style="margin-left:33px;">로그아웃</a>
+        <br>
+        {% else %}
+        <p>이 유저는 로그아웃 되어 있습니다..</p>
+
+        <a href="{% url 'users:login' %}">로그인</a>&nbsp;&middot;
+        <a href="{% url 'users:agreement' %}">회원가입</a>
+        <br>
+        {% endif %}
+        <br>
+        <ul class="list-unstyled components mb-5 allMenuComponents" id="allMenuHide">
+            <li>
+                <a href="{% url 'users:main' %}"><i class="fas fa-home"
+                                                    style="margin-left:1px;"></i>&nbsp;&nbsp;HOME</a>
+            </li>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu1"><i
+                        class="fas fa-user" style="margin:0 2.5px;"></i>&nbsp;&nbsp;My Page</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="{% url 'users:profile' %}"><i class="fas fa-user-cog"></i>&nbsp;&nbsp;내 정보</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'users:profile_post' %}"><i class="fas fa-user-edit"></i>&nbsp;&nbsp;작성한 글</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'users:profile_comment' %}"><i class="fas fa-comments"></i>&nbsp;&nbsp;댓글단 글</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu2"><i
+                        class="fas fa-pen" style="margin-right:4px;"></i>&nbsp;&nbsp;Notice</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu1">
+                    <li>
+                        <a href="{% url 'notice:notice_list' %}"><i
+                                class="fas fa-clipboard-check"></i>&nbsp;&nbsp;공지사항</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'free:all_list' %}"><i
+                                class="fas fa-clipboard-list"></i>&nbsp;&nbsp;자유게시판</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'anonymous:anonymous_list' %}"><i
+                                class="fas fa-clipboard"></i>&nbsp;&nbsp;익명게시판</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'board:index' %}"><i class="fas fa-crown"></i>&nbsp;&nbsp;투표함</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu3"><i class="fas fa-calendar"></i>&nbsp;&nbsp;&nbsp;Calendar</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <li>
+                        <a href="{% url 'calender:calender' %}"><i class="fas fa-calendar-day"></i>&nbsp;&nbsp;일정</a>
+                    </li>
+                    <li>
+                        <a href="http://jbnudongari.com/file/gesi_list.php?cs_ancestor=5&cs_mkey=39"><i class="fas fa-link"></i>&nbsp;&nbsp;동전관 예약 일정 바로가기</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle menu4"><i
+                        class="fas fa-users"></i>&nbsp;&nbsp;Pit A Pat</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu3">
+                    <li>
+                        <a href="{% url 'about:organization' %}"><i class="fas fa-sitemap"></i>&nbsp;&nbsp;동아리 조직도</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about:pitapat' %}"><i class="fas fa-diagnoses"></i>&nbsp;&nbsp;동아리 소개</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://open.kakao.com/o/suLflcZf" target="_blank"><i class="fas fa-robot"></i>&nbsp;&nbsp;1:1 채팅</a>
+            </li>
+        </ul>
+        <!--사이드바 FOOTER-->
+        <div class="footer" style="position: fixed; bottom: 0; margin-left:-7px;">
+            <p class="copyrightFooter">
+                Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+            </script>
+                All rights<br>reserved <br><i class="icon-heart" aria-hidden="true"></i> by <a
+                    href="https://www.instagram.com/pitapat___/" target="_blank">Pit_a_Pat</a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+

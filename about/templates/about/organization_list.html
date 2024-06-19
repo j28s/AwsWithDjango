@@ -1,0 +1,85 @@
+{% extends "users/main_base.html" %}
+{% load static %}
+
+{% block mobileView %}
+<meta name="viewport" content="width=1200, user-scalable=yes">
+{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}" type="text/css">
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10">
+            <h4 style="font-weight: bold;">Pit A Pat 조직도</h4><h5>2024ver.</h5>
+        </div>
+    </div>
+</div>
+<hr style="width:69rem;">
+<br><br>
+<div class="row justify-content-md-center">
+    <div class="card organizationCard">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">대표자</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            <span class="oragnizationRank">회장</span>
+            <span class="oragnizationName">박정선</span><br>
+            <span class="oragnizationRank">부회장</span>
+            <span class="oragnizationName">육현희</span><br>
+            <span class="oragnizationRank">총무</span>
+            <span class="oragnizationName">신채리</span><br>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="row justify-content-md-center">
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">6기</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            <span class="oragnizationName">박정선</span><br>
+            <span class="oragnizationName">육현희</span><br>
+            <span class="oragnizationName">신채리</span><br>
+<!--            <span class="oragnizationName">임아영</span><br>-->
+<!--            <span class="oragnizationName">김의진</span><br>-->
+
+
+        </div>
+    </div>
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">7기</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            <span class="oragnizationName">주혜인</span><br>
+            <span class="oragnizationName">임태민</span><br>
+<!--            <span class="oragnizationName">정효명</span><br>-->
+        </div>
+    </div>
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">8기</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+<!--            <span class="oragnizationName">아직 모집되지 않았습니다:)</span><br>-->
+            <span class="oragnizationName">강현정</span><br>
+            <span class="oragnizationName">김하영</span><br>
+            <span class="oragnizationName">박온유</span><br>
+            <span class="oragnizationName">시보경</span><br>
+            <span class="oragnizationName">임다혜</span><br>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none !important;
+    border-collapse: collapse;
+    color: black;
+}
+
+/* ↓ intro 배경 ↓ */
+.container0 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/bg1.jpg");
+    padding-top: 1%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ↓ 상단 바 ↓ */
+.header {
+    width: 80%;
+    /*height: 80px;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 여기 다시 */
+
+
+.nav0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar_logo a {
+    font-size: 48px;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_logo a:hover { /* 마우스 커서 시 색상변경 */
+    color: rgb(150, 35, 190);
+}
+
+.navbar_menu {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* ***** */
+}
+
+.nav0 .navbar_menu > li {
+    /*display: inline-block;*/
+    margin: 0 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.navbar_menu > li > a {
+    text-decoration: none; /*가로정렬*/
+    color: white;
+}
+
+.navbar-toggleBtn {
+    display: none;
+    position: absolute;
+    font-size: 24px;
+    right: 30px;
+    top: 30px;
+}
+
+.navbar-collapse {
+    display: block !important;
+}
+/* intro contents */
+.container0 .hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center;
+}
+
+
+.container0 .hero h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fff;
+    align-items: center;
+}
+
+.container0 .hero p {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* 반응형 헤더 */
+@media screen and (max-width: 768px) {
+    .navbar_logo {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .nav0 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu > li {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .navbar-toggleBtn {
+        display: block;
+    }
+
+    .navbar_menu.active {
+        display: flex;
+    }
+    /*.container0 .hero {*/
+    /*    !*position: relative;*!*/
+    /*    !*width: 100%;*!*/
+    /*    height: 200px;*/
+    /*    !*text-align: center;*!*/
+    /*    !*display: flex;*!*/
+    /*    !*flex-direction: column;*!*/
+    /*    margin-top: 15px;*/
+    /*}*/
+    /*.container0 .hero h2 {*/
+    /*    font-size: 30px;*/
+    /*    margin-bottom: 10px;*/
+    /*    !*color: #fff;*!*/
+    /*    !*align-items: center;*!*/
+    /*}*/
+
+    /*.container0 .hero p {*/
+    /*    font-size: 11px;*/
+    /*    !*color: #fff;*!*/
+    /*}*/
+    .container0 {
+        height: 150vh;
+        background-attachment: fixed;
+    }
+}
+
+.container-fluid navbar-collapse button {
+    color: white;
+}
+
+.header nav ul li a:hover { /* 마우스 커서 시 색상변경 */
+    color: rgb(200, 50, 230);
+}
+
+/* intro contents */
+/*.container0 .hero {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    height: 400px;*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin-top: 30px;*/
+/*    justify-content: center; !* 수평 가운데 정렬 *!*/
+/*    align-items: center;*/
+/*}*/
+
+
+/*.container0 .hero h2 {*/
+/*    font-size: 60px;*/
+/*    margin-bottom: 20px;*/
+/*    color: #fff;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.container0 .hero p {*/
+/*    font-size: 22px;*/
+/*    color: #fff;*/
+/*}*/
+
+.container0 .hero button {
+    background: none;
+    border: 2px solid rgb(95, 40, 146);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container0 .hero button a {
+    text-decoration: none;
+}
+
+.container0 .hero button:hover { /* 마우스 커서 시 색상변경 */
+    background-color: rgba(79, 31, 124, 0.692);
+}
+
+
+/* nav {background-color: darkgreen; font-size: 150%; text-align: center}
+nav a {color:gold} */
+
+/* ↓ home ↓ */
+
+.home_bg { /* home 배경 */
+    background-image: url("../image/bg0.jpg");
+    width: 100%;
+    height: 718px;
+    padding-top: 1%;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed; /**/
+
+}
+
+.home_text {
+    width: 100%;
+    margin: 231px auto 231px auto;
+    text-align: center;
+}
+
+.home_text h1 {
+    font-size: 48px;
+    font-weight: 500;
+
+}
+
+.home_text h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.home_text h4 {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 450px;
+    margin-top: 50px;
+    font-weight: 150;
+}
+
+.home_text > h1,
+.home_text > h3,
+.home_text > h4 {
+    color: #fff;
+}
+
+/* ↓ home 박스 만들기 ↓ */
+.represent {
+    position: relative;
+    top: -66px;
+    display: flex;
+    width: 1280px;
+    background: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.represent > li {
+    flex: 1;
+    height: 132px;
+}
+
+.represent > li > div {
+    text-align: center;
+    margin-top: 37px;
+    height: 57px;
+}
+
+.represent > li > div:not(last-child) {
+    border-right: 1px solid #e1e1e1;
+}
+
+/* ↓ home 박스 안에 글씨 ↓ */
+.contents1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.contents1_bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contents2 {
+    font-size: 25px;
+}
+
+/* ↓ 저작권 ↓ */
+.copyright p {
+    bottom: 0;
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 3em;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ↓ profile section ↓ */
+.profile_section {
+    display: flex;
+    flex-direction: row;
+    margin: 100px 100px;
+    align-items: center;
+}
+
+#profile_picture {
+    width: 400px;
+    margin-right: 60px;
+    border-radius: 50%; /* 이미지를 원형으로 만듭니다 */
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.introduction1 {
+    position: relative;
+    flex: 1;
+    margin: 0 0 0 200px;
+
+}
+
+.introduction2 {
+    position: relative;
+    line-height: 2.5rem;
+    padding: 1%;
+    padding-left: 3%;
+    margin: 0 200px 0 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.introduction2 h1 {
+    margin: 1%;
+}
+
+
+.contents3 {
+    position: absolute;
+    left: 3%;
+    font-size: 20px;
+    font-weight: bolder;
+    display: inline-block;
+    margin: 0 0 0 2%;
+}
+
+.contents4 {
+    font-size: 20px;
+    font-weight: lighter;
+    display: block;
+    margin-inline-start: 50px;
+}
+
+hr {
+    position: relative;
+    right: 17px;
+    margin: 2%;
+}
+
+/**/
+.main_text0 {
+    width: 100%;
+    height: 601px;
+    margin-top: -132px;
+    background: #f1f2f3;
+}
+
+.main_text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+}
+
+.main_text0 > .contents1 {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    width: 1280px;
+    height: 302px;
+    margin: auto;
+}
+
+.icons > li {
+    flex: 1;
+    background: white;
+    margin-top: 49px;
+    height: 302px;
+    text-align: center;
+}
+
+.icons > li > .icon_img {
+    margin-top: 24px;
+}
+
+.icons > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.icon .contents4 {
+    width: 180px;
+    margin: auto;
+    letter-spacing: -1px;
+}
+
+.more {
+    width: 100px;
+    height: 30px;
+    background: #2f7af4;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    margin: auto;
+    margin-top: 7px;
+}
+
+/* blog */
+.blog_bg { /* home 배경 */
+    background-image: url("..image/bg0.jpg");
+    width: 100%;
+    heigh: 50px;
+    padding-top: 1%;
+}
+
+
+/* blog menu */
+.menu0 {
+    width: 200px;
+    overflow: hidden;
+    left: 0;
+    padding: 0;
+}
+
+.menu0 > li {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    background-color: darkgray;
+    margin: 0;
+}
+
+.menu0 a {
+    flex: 1;
+    color: white;
+    font-color: black;
+}
+
+.submenu0 > li {
+    line-height: 50px;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.submenu0 {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.menu0 > li:hover {
+    background-color: purple;
+    transition-duration: 0.5s;
+}
+
+.menu0 > li:hover .submenu0 {
+    height: 150px; /*서브메뉴 li한개의 높이 50*3*/
+    transition-duration: 1s;
+}
+
+.title-text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.title {
+    margin-top: 50px;
+    font-weight: bolder;
+    font-size: 30px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.shhh {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    position: relative;
+    z-index: 2;
+
+}
+
+.blog {
+    display: flex;
+}
+
+.blog-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-text, .blog-container {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 20px;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.position0 {
+    display: flex;
+
+}
+
+. {
+
+}
+
+.blog-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center; /* 세로 가운데 정렬 */
+    flex-direction: row;
+    position: relative;
+    transform: translateY(-40%);
+    /*justify-content: space-between;*/
+    justify-content: center;
+
+    white-space: nowrap; /* 텍스트 줄 바꿈 금지 */
+    text-overflow: ellipsis; /* 텍스트가 넘칠 경우 마침표로 생략 처리 */
+}
+
+.blog_list a {
+    background-color: rgba(88, 0, 128, 0.5);
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
+
+}
+
+.blog_list0 a {
+    background-color: rgba(0, 0, 128, 0.5);
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
+
+}
+
+.con_contain {
+    display: flex;
+    margin: 40px;
+    text-align: center;
+
+}
+
+.con_contain h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.conversion-container {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 100vh;
+    position: relative;
+    /*transform: translateY(-30%);*/
+}
+
+
+.conversion {
+    background-color: rgba(0, 100, 0, 0.7);
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 20px;
+    margin: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+#img0 {
+    position: relative;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.conversion0 {
+    text-align: center;
+    font-size: 20px;
+    margin: 40px;
+}
+

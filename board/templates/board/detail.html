@@ -1,0 +1,34 @@
+{% extends "users/main_base.html" %}
+{% load static %}
+{% block main_area %}
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card" style="width: 24rem; height: 18rem; font-size: 16px">
+            <div class="card-header">{{ question.question_text }}</div>
+            <ul class="list-group list-group-flush" style="line-height: 4;">
+                <li class="list-group-item">
+                    <form action="{% url 'board:vote' question.id %}" method="post">
+                        {% csrf_token %}
+
+                        {% for choice in question.votechoice_set.all %}
+                            <input type="checkbox" name="choices" id="choice{{ choice.id }}" value="{{ choice.id }}">
+                            <label for="choice{{ choice.id }}">{{ choice.choice_text }}</label><br>
+                        {% endfor %}
+
+                        <button type="submit" class="btn btn-outline-danger">Vote</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

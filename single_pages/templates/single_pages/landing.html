@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pit A Pat</title>
+    <!--    <link href="{% static 'single_pages/css/styles.css' %}" rel="stylesheet"/>-->
+
+    <link href="{% static 'single_pages/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6dd7aef1ed.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{% static 'blog/js/burger.js' %}" defer></script>
+
+</head>
+<body>
+<div class="container0">
+    <div class="header">
+        <nav class="nav0">
+            <div class="navbar_logo">
+                <a href="/">Pit A Pat</a>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <!--            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">-->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">
+                        {{ user.username }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/accounts/logout/" style="color: #ffffff;">Log Out</a>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal" style="color: #ffffff;">Log
+                        In</a>
+                </li>
+                {% endif %}
+            </ul>
+            <a href="#" class="navbar-toggleBtn">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </a>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i>&nbsp Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a role="button" class="btn btn-outline-dark btn-block btn-sm"
+                                   href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i>&nbsp&nbsp Log
+                                    in with
+                                    Google</a>
+                                <a role="button" class="btn btn-outline-dark btn-block btn-sm"
+                                   href="/accounts/login/"><i
+                                        class="far fa-envelope"></i>&nbsp&nbsp Log in with E-mail</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="/accounts/signup/"><i
+                                        class="far fa-envelope"></i>&nbsp&nbsp Sign Up with E-mail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="hero">
+        <h2>PIT A PAT</h2>
+        <p>Come in !<br>Let's go</p>
+        <button><a href="{% url 'users:main' %}" style="color:white">Enter</a></button>
+    </div>
+</div>
+<footer>
+    <div class="copyright">
+        <p>@ 2023 Pit_a_Pat. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

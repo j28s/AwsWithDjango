@@ -6,13 +6,13 @@ $(document).ready(function(){
             left: "48px",
         });
 
-        $('#injeLink1').text('인제대 학사공지')
-        $('#injeLink2').text('인제대 장학공지')
-        $('#injeLink3').text('인제대 취업/모집')
+        // $('#injeLink1').text('핏어팻')
+        // $('#injeLink2').text('핏어팻')
+        // $('#injeLink3').text('핏어팻')
         $('#carouselContainer').css({
             'margin-bottom': "5px",
         });
-        $('#mainpageCalenderId').text('컴공 학사일정')
+        $('#mainpageCalenderId').text('핏어팻 일정')
     }
     
     else {

@@ -86,6 +86,7 @@ def anonymous_detail_view(request, pk):
     return render(request, 'anonymous/anonymous_detail.html', context)
 
 
+
 # 익명게시파 글 쓰기
 @login_message_required
 def anonymous_write_view(request):

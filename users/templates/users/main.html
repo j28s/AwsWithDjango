@@ -13,7 +13,8 @@
 <div style="margin: 55px -10px -40px 4px;">
     <div class="container" id="carouselContainer" style="margin-bottom: -5px;">
         <div>
-            <a href="#" class="customPrevBtn carouselHover" style="float:left;"><i class="fas fa-chevron-circle-left fa-2x"></i></a>
+            <a href="#" class="customPrevBtn carouselHover" style="float:left;"><i
+                    class="fas fa-chevron-circle-left fa-2x"></i></a>
         </div>
 
         <div>
@@ -28,17 +29,19 @@
                 <span style="font-size: 20px; font-weight: bold; float:left;"><i
                         class="fas fa-bullhorn"></i>&nbsp;&nbsp;최근 공지사항</span>
                 <div style="text-align: right; margin-bottom: 50px; padding-top: -5px;">
-                    <a href="{% url 'notice:notice_list' %}" style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;" class="btn btn btn-sm">전체보기</a>
+                    <a href="{% url 'notice:notice_list' %}"
+                       style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;"
+                       class="btn btn btn-sm">전체보기</a>
                 </div>
                 <div style="margin-bottom: -47.56px;">
-                {% for notice in notice_list %}
-                <div class="notice_box">
-                    <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/notice/{{ notice.id }}'"
-                        style="padding: 12px; margin-top: -36px; margin-bottom: -36px; cursor:pointer; height:52px;">
-                        <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ notice.title|truncatechars:24 }}</span>
+                    {% for notice in notice_list %}
+                    <div class="notice_box">
+                        <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/notice/{{ notice.id }}'"
+                             style="padding: 12px; margin-top: -36px; margin-bottom: -36px; cursor:pointer; height:52px;">
+                            <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ notice.title|truncatechars:24 }}</span>
+                        </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -46,27 +49,30 @@
         <div class="col-sm-6">
             <div class="shadow p-3 mb-5 bg-white rounded" style="width:98%">
                 <span style="font-size: 20px; font-weight: bold; float:left;"><i
-                        class="fas fa-calender-check"></i>&nbsp;&nbsp;<span id="mainpageCalenderId">핏어팻 일정 관리</span></span>
+                        class="fas fa-calender-check"></i>&nbsp;&nbsp;<span
+                        id="mainpageCalenderId">핏어팻 일정 관리</span></span>
                 <div style="text-align: right; margin-bottom: 10px;">
-                    <a href="{% url 'calender:calender' %}" style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;" class="btn btn btn-sm">전체보기</a>
-                </div>     
+                    <a href="{% url 'calender:calender' %}"
+                       style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;"
+                       class="btn btn btn-sm">전체보기</a>
+                </div>
                 <div style="margin-bottom: -9px">
-                {% for calender in calender_list %}
-                <div class="notice_box">
-                    <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/calender/'"
-                        style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
-                        {% if calender.d_day == 'D-DAY' %}
-                        <span style="font-weight: bold; color: rebeccapurple">{{ calender.d_day }}</span>
-                        {% else %}
-                        <span style="font-weight: bold; color:rgb(88, 88, 88)">{{ calender.d_day }}</span>
-                        {% endif %}
-                        <span style="color: gray; font-size:16px; font-weight: 550;">&nbsp;&nbsp;{{ calender.event_name|truncatechars:11 }}</span>
-                        <div style="float:right">
-                            <span style="color: gray; font-size:16px">{{ calender.start_date }}</span>
+                    {% for calender in calender_list %}
+                    <div class="notice_box">
+                        <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/calender/'"
+                             style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
+                            {% if calender.d_day == 'D-DAY' %}
+                            <span style="font-weight: bold; color: rebeccapurple">{{ calender.d_day }}</span>
+                            {% else %}
+                            <span style="font-weight: bold; color:rgb(88, 88, 88)">{{ calender.d_day }}</span>
+                            {% endif %}
+                            <span style="color: gray; font-size:16px; font-weight: 550;">&nbsp;&nbsp;{{ calender.event_name|truncatechars:11 }}</span>
+                            <div style="float:right">
+                                <span style="color: gray; font-size:16px">{{ calender.start_date }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -79,18 +85,20 @@
                 <span style="font-size: 20px; font-weight: bold; float:left;"><i
                         class="fas fa-info-circle"></i>&nbsp;&nbsp;자유게시판 정보글</span>
                 <div style="text-align: right; margin-bottom: 10px;">
-                    <a href="{% url 'free:information_list' %}" style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;" class="btn btn btn-sm">전체보기</a>
+                    <a href="{% url 'free:information_list' %}"
+                       style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;"
+                       class="btn btn btn-sm">전체보기</a>
                 </div>
 
                 <div style="margin-bottom: -13px;">
-                {% for free in free_list %}
-                <div class="notice_box">
-                    <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/free/{{ free.id }}/'"
-                        style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
-                        <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ free.title|truncatechars:24 }}</span>
+                    {% for free in free_list %}
+                    <div class="notice_box">
+                        <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/free/{{ free.id }}/'"
+                             style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
+                            <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ free.title|truncatechars:24 }}</span>
+                        </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
 
             </div>
@@ -99,29 +107,67 @@
             <div class="shadow p-3 mb-5 bg-white rounded" style="width:98%">
                 <span style="font-size: 20px; font-weight: bold; float:left;"><i class="fas fa-fire-alt"></i>&nbsp;&nbsp;익명게시판 HOT</span>
                 <div style="text-align: right; margin-bottom: 10px;">
-                    <a href="{% url 'anonymous:anonymous_list' %}" style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;" class="btn btn btn-sm">전체보기</a>
+                    <a href="{% url 'anonymous:anonymous_list' %}"
+                       style="background-color: rebeccapurple; color:white; font-size: 13px; margin-top: -5px; margin-right: -5px;"
+                       class="btn btn btn-sm">전체보기</a>
                 </div>
                 <div style="margin-bottom: -13px;">
-                {% for anonymous in anonymous_list %}
-                <div class="notice_box">
-                    <div class="shadow-none mb-5 bg-light rounded" onclick="location.href='/anonymous/{{ anonymous.id }}/'"
-                        style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
-                        <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ anonymous.title|truncatechars:24 }}</span>
-                        <div style="float:right">
-                            <span style="color: gray; font-size:16px"><i class="fas fa-thumbs-up" style="opacity: 80%;"></i>&nbsp;&nbsp;{{ anonymous.like_count }}&nbsp;&nbsp;<i class="fas fa-comments" style="opacity: 80%;"></i>&nbsp;&nbsp;{{ anonymous.comments }}</span>
+                    {% for anonymous in anonymous_list %}
+                    <div class="notice_box">
+                        <div class="shadow-none mb-5 bg-light rounded"
+                             onclick="location.href='/anonymous/{{ anonymous.id }}/'"
+                             style="padding: 12px; margin-top: 0px; margin-bottom: 12px !important; cursor:pointer; height:52px;">
+                            <span style="color: gray; font-size:16px; font-weight:550;">&nbsp;&nbsp;{{ anonymous.title|truncatechars:24 }}</span>
+                            <div style="float:right">
+                                <span style="color: gray; font-size:16px"><i class="fas fa-thumbs-up"
+                                                                             style="opacity: 80%;"></i>&nbsp;&nbsp;{{ anonymous.like_count }}&nbsp;&nbsp;<i
+                                        class="fas fa-comments" style="opacity: 80%;"></i>&nbsp;&nbsp;{{ anonymous.comments }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i>&nbsp Log In
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a role="button" class="btn btn-outline-dark btn-block btn-sm"
+                                       href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i>&nbsp&nbsp
+                                        Log
+                                        in with
+                                        Google</a>
+                                    <a role="button" class="btn btn-outline-dark btn-block btn-sm"
+                                       href="/accounts/login/"><i
+                                            class="far fa-envelope"></i>&nbsp&nbsp Log in with E-mail</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a role="button" class="btn btn-outline-dark btn-block btn-sm"
+                                       href="/accounts/signup/"><i
+                                            class="far fa-envelope"></i>&nbsp&nbsp Sign Up with E-mail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
-                </div>
-
             </div>
         </div>
     </div>
-</div>
 
-<script src="{% static 'users/js/owl.carousel.min.js' %}"></script>
-<script src="{% static 'users/js/aos.js' %}"></script>
-<script src="{% static 'users/js/jquery.sticky.js' %}"></script>
-<script src="{% static 'users/js/customCarousel.js' %}"></script>
-{% endblock %}
+    <script src="{% static 'users/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'users/js/aos.js' %}"></script>
+    <script src="{% static 'users/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'users/js/customCarousel.js' %}"></script>
+    {% endblock %}
